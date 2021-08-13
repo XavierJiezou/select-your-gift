@@ -23,6 +23,6 @@ def index():
 
 
 if __name__ == '__main__':
-    # webview.create_window('SelectYourGift', app.run(debug=True))
-    # webview.start()
-    app.run(debug=True)
+    webview.create_window('SelectYourGift', app)
+    webview.start()
+    # app.run(debug=True)
