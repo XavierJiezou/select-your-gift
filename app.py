@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, render_template
 import os
 import sys
+import time
 import webview
 
 
@@ -21,14 +22,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/add', methods=['POST'])
-def add():
-    a = request.values.get('a')
-    b = request.values.get('b')
-    c = float(a)+float(b)
-    return jsonify({'c': c})
-
-
 if __name__ == '__main__':
-    webview.create_window('Flask example', app)
-    webview.start()
+    # webview.create_window('SelectYourGift', app.run(debug=True))
+    # webview.start()
+    app.run(debug=True)
